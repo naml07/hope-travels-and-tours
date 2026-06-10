@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOPE TRAVELS & TOURS | Votre Agence de Voyage & Tourisme à Lomé</title>
+    <meta name="description" content="Hope Travels & Tours, votre partenaire de confiance pour la billetterie, les visas, assurances, réservations d'hôtels et séjours. Basée à Lomé avec +10 ans d'expérience.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Specific Styles for Index */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .feature-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--secondary-blue);
+        }
+        
+        .testimonials {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            min-height: 250px;
+        }
+        .testimonial-slide {
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .stars { color: #FFD700; margin-bottom: 1rem; }
+        .client-name { font-weight: 700; color: var(--primary-blue); margin-top: 1rem; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-plane-departure"></i>
+                HOPE <span>TRAVELS</span>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link active">Accueil</a>
+                <a href="services.html" class="nav-link">Nos Services</a>
+                <a href="billets.html" class="nav-link">Nos Billets</a>
+                <a href="histoire.html" class="nav-link">Notre Histoire</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="reserver.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Réserver</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <img src="assets/images/hero.png" alt="Voyageurs Africains" class="hero-bg">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Des rêves d'évasion aux souvenirs inoubliables</h1>
+                <p>Confiez-nous l'organisation de vos voyages d'affaires ou de tourisme. Avec plus de 10 ans d'expertise à Lomé, nous gérons tout de A à Z : billets, visas, hôtels, et plus encore.</p>
+                <div class="hero-buttons">
+                    <a href="reserver.html" class="btn btn-primary">Réserver un voyage <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="services.html" class="btn btn-secondary">Découvrir nos services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="section-light">
+        <div class="container animate-on-scroll" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+            <div>
+                <h3 style="color: var(--secondary-blue); text-transform: uppercase; font-size: 1rem; letter-spacing: 2px;">Qui sommes-nous ?</h3>
+                <h2>Votre monde, Vos voyages</h2>
+                <p><strong>HOPE TRAVEL AND TOURS</strong>, basée à Lomé, dispose de plus de 10 ans d'expérience dans le domaine du voyage et du tourisme. Nous accompagnons particuliers, entreprises et institutions dans l'organisation de voyages d'affaires, de vacances et de missions professionnelles.</p>
+                <p>Notre mission est de simplifier vos démarches, vous faire gagner du temps et rendre chaque déplacement agréable et sécurisé.</p>
+                <a href="histoire.html" class="btn btn-secondary" style="margin-top: 1.5rem;">En savoir plus sur notre agence</a>
+            </div>
+            <div>
+                <img src="assets/images/V2.jpeg" alt="Équipe Hope Travels" style="border-radius: 12px; box-shadow: var(--shadow-lg);">
+            </div>
+        </div>
+    </section>
+
+    <!-- POURQUOI NOUS CHOISIR -->
+    <section>
+        <div class="container">
+            <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+                <h2>Pourquoi Nous Choisir ?</h2>
+                <p>Passer par notre agence présente des avantages majeurs pour vous garantir un voyage en toute tranquillité.</p>
+            </div>
+            
+            <div class="features-grid animate-on-scroll delay-100">
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-user-tie"></i></div>
+                    <div>
+                        <h4>Accompagnement personnalisé</h4>
+                        <p>Des agents experts pour choisir l'itinéraire idéal, avant, pendant et après votre voyage.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div>
+                        <h4>Gain de temps</h4>
+                        <p>Nous faisons les recherches à votre place et vous proposons les meilleures options disponibles.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-tag"></i></div>
+                    <div>
+                        <h4>Offres spéciales</h4>
+                        <p>Bénéficiez de tarifs négociés, de surclassements et d'avantages exclusifs.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div>
+                        <h4>Sécurité et assistance</h4>
+                        <p>Un interlocuteur direct en cas d'annulation, de retard ou de modification de votre vol.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-briefcase"></i></div>
+                    <div>
+                        <h4>Solutions complètes</h4>
+                        <p>Billets, hôtels, assurances, transferts, circuits, visas et location de véhicules.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-credit-card"></i></div>
+                    <div>
+                        <h4>Paiement flexible</h4>
+                        <p>Des facilités de paiement accessibles pour concrétiser vos projets d'évasion.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="section-light">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Ils Voyagent en Confiance</h2>
+            <div class="testimonials animate-on-scroll delay-100">
+                <div class="testimonial-slide">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Une agence extrêmement professionnelle. L'équipe a géré mon voyage d'affaires de bout en bout : billet, visa et hôtel. Un gain de temps précieux."</p>
+                    <div class="client-name">Koffi A., Directeur Commercial</div>
+                </div>
+                <div class="testimonial-slide" style="display:none;">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Nous sommes partis en vacances en famille et tout était parfait. Le suivi avant et pendant le voyage nous a vraiment rassurés. Merci Hope Travels !"</p>
+                    <div class="client-name">Amina D., Voyage familial</div>
+                </div>
+                <div class="testimonial-slide" style="display:none;">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Excellent accompagnement pour les formalités de visa. L'équipe est disponible, à l'écoute et maîtrise parfaitement les procédures."</p>
+                    <div class="client-name">Jean-Paul M., Consultant</div>
+                </div>
+                <div class="testimonial-slide" style="display:none;">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"J'ai organisé un séminaire d'entreprise avec eux et la gestion a été impeccable de A à Z. Des partenaires de confiance au Togo."</p>
+                    <div class="client-name">Fatou S., Chef d'Entreprise</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: var(--white); margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        HOPE <span>TRAVELS</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.8);">Offrez-vous le monde à petit prix. Votre partenaire voyage et tourisme de référence, basé à Lomé, Togo.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Utiles</h4>
+                    <a href="index.html" class="footer-link">Accueil</a>
+                    <a href="services.html" class="footer-link">Nos Services</a>
+                    <a href="billets.html" class="footer-link">Nos Billets</a>
+                    <a href="histoire.html" class="footer-link">Notre Histoire</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Rond point Bè Gakpoto-Yesuvito, à coté de la pharmacie, Lomé</p>
+                    <p><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +228 98 33 79 56 / +228 90 36 68 54</p>
+                    <p><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> hopetravels6@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Hope Travels & Tours. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/22898337956?text=Bonjour,%20je%20souhaite%20avoir%20des%20renseignements%20pour%20un%20voyage." class="whatsapp-float" target="_blank" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

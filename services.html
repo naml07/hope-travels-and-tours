@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services | HOPE TRAVELS & TOURS</title>
+    <meta name="description" content="Découvrez nos services complets : billetterie aérienne, visa, assurances voyage, croisières, hôtels, location de véhicules et plus.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .page-header h1 {
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+        .service-list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .service-item {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--border-color);
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-item > div:last-child {
+            margin-top: auto !important; /* Push button to bottom to equalize heights */
+            padding-top: 1.5rem;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--secondary-blue);
+        }
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--secondary-blue);
+        }
+        .service-number {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-blue);
+            opacity: 0.5;
+        }
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1.5rem;
+        }
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+        .service-desc {
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-plane-departure"></i>
+                HOPE <span>TRAVELS</span>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link active">Nos Services</a>
+                <a href="billets.html" class="nav-link">Nos Billets</a>
+                <a href="histoire.html" class="nav-link">Notre Histoire</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="reserver.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Réserver</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Nos Services</h1>
+            <p>Une gamme complète pour accompagner chaque étape de votre mobilité</p>
+        </div>
+    </div>
+
+    <!-- SERVICES LIST -->
+    <section class="section-light">
+        <div class="container">
+            
+            <div class="service-list-grid animate-on-scroll delay-100">
+                <!-- 1 -->
+                <div class="service-item" onclick="openServiceModal('Billetterie Aérienne')">
+                    <div class="service-number">01</div>
+                    <div class="service-icon"><i class="fa-solid fa-ticket-airline"></i></div>
+                    <div class="service-title">Billetterie Aérienne</div>
+                    <div class="service-desc">Réservation et émission de billets d'avion pour toutes les destinations mondiales. Les meilleures correspondances et tarifs négociés.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="service-item" onclick="openServiceModal('Assistance Visa & Formalités')">
+                    <div class="service-number">02</div>
+                    <div class="service-icon"><i class="fa-solid fa-passport"></i></div>
+                    <div class="service-title">Assistance Visa & Formalités</div>
+                    <div class="service-desc">Conseil, préparation minutieuse et suivi complet de votre dossier pour maximiser vos chances d'obtention de visa.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="service-item" onclick="openServiceModal('Assurances Voyage & Santé')">
+                    <div class="service-number">03</div>
+                    <div class="service-icon"><i class="fa-solid fa-suitcase-medical"></i></div>
+                    <div class="service-title">Assurances Voyage & Santé</div>
+                    <div class="service-desc">Des solutions pratiques et fiables pour garantir votre mobilité et celle de votre famille en toute sécurité.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="service-item" onclick="openServiceModal('Assurance Auto')">
+                    <div class="service-number">04</div>
+                    <div class="service-icon"><i class="fa-solid fa-car-burst"></i></div>
+                    <div class="service-title">Assurance Auto</div>
+                    <div class="service-desc">Couverture et solutions pratiques pour protéger votre véhicule et assurer votre mobilité quotidienne en toute sécurité.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="service-item" onclick="openServiceModal('Réservations d\'Hôtels')">
+                    <div class="service-number">05</div>
+                    <div class="service-icon"><i class="fa-solid fa-hotel"></i></div>
+                    <div class="service-title">Réservations d'Hôtels</div>
+                    <div class="service-desc">Des hébergements confirmés et confortables réservés pour vous, partout dans le monde, selon votre budget.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="service-item" onclick="openServiceModal('Organisation de Séminaires & Conférences')">
+                    <div class="service-number">06</div>
+                    <div class="service-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+                    <div class="service-title">Organisation de Séminaires & Conférences</div>
+                    <div class="service-desc">Gestion professionnelle et clé en main de vos événements d'entreprise, formations et congrès professionnels.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="service-item" onclick="openServiceModal('Tourisme & Circuits')">
+                    <div class="service-number">07</div>
+                    <div class="service-icon"><i class="fa-solid fa-camera-retro"></i></div>
+                    <div class="service-title">Tourisme & Circuits</div>
+                    <div class="service-desc">Des excursions inoubliables, des séjours organisés et des découvertes culturelles enrichissantes sur mesure.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="service-item" onclick="openServiceModal('Croisières')">
+                    <div class="service-number">08</div>
+                    <div class="service-icon"><i class="fa-solid fa-ship"></i></div>
+                    <div class="service-title">Croisières</div>
+                    <div class="service-desc">En partenariat exclusif avec Royal Caribbean (via GOTA - Bénin), nous vous proposons des expériences de croisières inoubliables.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="service-item" onclick="openServiceModal('Transfert d\'Argent')">
+                    <div class="service-number">09</div>
+                    <div class="service-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                    <div class="service-title">Transfert d'Argent</div>
+                    <div class="service-desc">Un service de transfert de fonds rapide, hautement sécurisé et facilement accessible pour vos besoins urgents.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+                <!-- 10 -->
+                <div class="service-item" onclick="openServiceModal('Location de Véhicules')">
+                    <div class="service-number">10</div>
+                    <div class="service-icon"><i class="fa-solid fa-car-side"></i></div>
+                    <div class="service-title">Location de Véhicules</div>
+                    <div class="service-desc">Une flotte de voitures adaptées à tous vos besoins, avec ou sans chauffeur, pour un voyage confortable dès votre arrivée.</div>
+                    <div style="margin-top: 1.5rem;">
+                        <span class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem; width: 100%; pointer-events: none;">En savoir plus <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <h3 style="margin-bottom: 1.5rem;">Besoin d'un accompagnement sur mesure ?</h3>
+                <a href="contact.html" class="btn btn-primary">Contacter un de nos agents</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: var(--white); margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        HOPE <span>TRAVELS</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.8);">Offrez-vous le monde à petit prix. Votre partenaire voyage et tourisme de référence, basé à Lomé, Togo.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Utiles</h4>
+                    <a href="index.html" class="footer-link">Accueil</a>
+                    <a href="services.html" class="footer-link">Nos Services</a>
+                    <a href="billets.html" class="footer-link">Nos Billets</a>
+                    <a href="histoire.html" class="footer-link">Notre Histoire</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Rond point Bè Gakpoto-Yesuvito, à coté de la pharmacie, Lomé</p>
+                    <p><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +228 98 33 79 56 / +228 90 36 68 54</p>
+                    <p><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> hopetravels6@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Hope Travels & Tours. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/22898337956?text=Bonjour,%20je%20souhaite%20avoir%20plus%20d'informations%20sur%20vos%20services." class="whatsapp-float" target="_blank" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- SERVICE MODAL -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-content" style="max-width: 600px;">
+            <button class="modal-close" onclick="closeServiceModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <h2>Demander un Service</h2>
+                <p>Remplissez ce formulaire et nous vous recontacterons via WhatsApp.</p>
+            </div>
+            
+            <form id="serviceForm" onsubmit="handleServiceSubmit(event)">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div class="form-group">
+                        <label class="form-label" for="s_nom">Nom</label>
+                        <input type="text" id="s_nom" class="form-control" required placeholder="Votre nom">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="s_prenom">Prénom</label>
+                        <input type="text" id="s_prenom" class="form-control" required placeholder="Votre prénom">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="s_email">Email</label>
+                    <input type="email" id="s_email" class="form-control" required placeholder="votre@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="s_sujet">Sujet</label>
+                    <input type="text" id="s_sujet" class="form-control" required readonly>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="s_message">Votre Message</label>
+                    <textarea id="s_message" class="form-control" required placeholder="Dites-nous comment nous pouvons vous aider..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                    Envoyer sur WhatsApp <i class="fa-brands fa-whatsapp" style="margin-left: 8px;"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-Nous | HOPE TRAVELS & TOURS</title>
+    <meta name="description" content="Contactez Hope Travels & Tours à Lomé. Adresse, téléphones, WhatsApp et formulaire de contact rapide pour toutes vos demandes de voyage.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .page-header h1 { color: var(--white); margin-bottom: 0.5rem; }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-info {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .contact-info h3 {
+            color: var(--white);
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .info-icon {
+            font-size: 1.5rem;
+            color: var(--accent-blue);
+        }
+        
+        .info-text h4 {
+            color: var(--white);
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+        
+        .info-text p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        .contact-form-container {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+        }
+        
+        .map-container {
+            margin-top: 4rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            height: 400px;
+        }
+        
+        @media (max-width: 992px) {
+            .contact-grid { grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem; }
+            .page-header { padding-bottom: 2rem; }
+            .contact-form-container { padding: 2rem; }
+        }
+    </style>
+</head>
+<body class="section-light">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-plane-departure"></i>
+                HOPE <span>TRAVELS</span>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link">Nos Services</a>
+                <a href="billets.html" class="nav-link">Nos Billets</a>
+                <a href="histoire.html" class="nav-link">Notre Histoire</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="reserver.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Réserver</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header" style="padding-bottom: 7rem;">
+        <div class="container">
+            <h1>Contactez-Nous</h1>
+            <p>Notre équipe est à votre disposition pour répondre à toutes vos questions.</p>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <div class="container">
+        <div class="contact-grid animate-on-scroll">
+            
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h3>Nos Coordonnées</h3>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="info-text">
+                        <h4>Adresse</h4>
+                        <p>Rond point Bè Gakpoto-Yesuvito<br>À coté de la pharmacie<br>Lomé, Togo</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info-text">
+                        <h4>Téléphones</h4>
+                        <p>+228 98 33 79 56<br>+228 90 36 68 54</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info-text">
+                        <h4>Email</h4>
+                        <p>hopetravels6@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <h4 style="color: var(--white); margin-bottom: 1rem;">Suivez-nous</h4>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--white);"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--white);"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" style="width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; color: var(--white);"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <h2 style="margin-bottom: 1.5rem;">Envoyez-nous un message</h2>
+                <p style="margin-bottom: 2rem; color: var(--text-color);">Remplissez ce formulaire pour une question rapide. Pour un devis de voyage, veuillez utiliser la page <a href="reserver.html" style="color: var(--secondary-blue); font-weight: 500;">Réserver un voyage</a>.</p>
+                
+                <form id="contactForm">
+                    <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label for="c_nom" class="form-label">Votre Nom *</label>
+                            <input type="text" id="c_nom" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="c_email" class="form-label">Votre Email *</label>
+                            <input type="email" id="c_email" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="c_sujet" class="form-label">Sujet</label>
+                        <input type="text" id="c_sujet" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="c_message" class="form-label">Votre Message *</label>
+                        <textarea id="c_message" class="form-control" required style="min-height: 150px;"></textarea>
+                    </div>
+                    
+                    <button type="button" onclick="sendContactWhatsApp()" class="btn btn-primary">
+                        <i class="fa-regular fa-paper-plane"></i> Envoyer via WhatsApp
+                    </button>
+                </form>
+                
+                <script>
+                    function sendContactWhatsApp() {
+                        const nom = document.getElementById('c_nom').value;
+                        const sujet = document.getElementById('c_sujet').value || 'Contact Général';
+                        const msg = document.getElementById('c_message').value;
+                        
+                        if(!nom || !msg) {
+                            alert("Veuillez remplir le nom et le message.");
+                            return;
+                        }
+                        
+                        const text = `*MESSAGE DE CONTACT*\n\n*Nom:* ${nom}\n*Sujet:* ${sujet}\n*Message:* ${msg}`;
+                        const waUrl = `https://wa.me/22898337956?text=${encodeURIComponent(text)}`;
+                        window.open(waUrl, '_blank');
+                    }
+                </script>
+            </div>
+            
+        </div>
+        
+        <!-- Map -->
+        <div class="map-container animate-on-scroll delay-100">
+            <!-- Google Maps iframe placeholder using a map of Lome, Togo -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15867.753896500366!2d1.222186!3d6.139049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1023e1e47f7d3a03%3A0xc6822c7ebdb17d1!2zTMOvbWUsIFRvZ28!5e0!3m2!1sfr!2sfr!4v1714000000000!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer" style="margin-top: 4rem;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: var(--white); margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        HOPE <span>TRAVELS</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.8);">Offrez-vous le monde à petit prix. Votre partenaire voyage et tourisme de référence, basé à Lomé, Togo.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Utiles</h4>
+                    <a href="index.html" class="footer-link">Accueil</a>
+                    <a href="services.html" class="footer-link">Nos Services</a>
+                    <a href="billets.html" class="footer-link">Nos Billets</a>
+                    <a href="histoire.html" class="footer-link">Notre Histoire</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Rond point Bè Gakpoto-Yesuvito, à coté de la pharmacie, Lomé</p>
+                    <p><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +228 98 33 79 56 / +228 90 36 68 54</p>
+                    <p><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> hopetravels6@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Hope Travels & Tours. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/22898337956?text=Bonjour,%20je%20souhaite%20vous%20contacter." class="whatsapp-float" target="_blank" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

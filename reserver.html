@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réserver un Voyage | HOPE TRAVELS & TOURS</title>
+    <meta name="description" content="Demandez un devis ou réservez votre voyage avec Hope Travels & Tours. Formulaire rapide de demande de voyage via WhatsApp.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .page-header h1 { color: var(--white); margin-bottom: 0.5rem; }
+        
+        .reservation-container {
+            max-width: 800px;
+            margin: -3rem auto 4rem;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 3rem;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row { grid-template-columns: 1fr; }
+            .reservation-container { padding: 1.5rem; margin-top: -2rem; }
+        }
+    </style>
+</head>
+<body class="section-light">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-plane-departure"></i>
+                HOPE <span>TRAVELS</span>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link">Nos Services</a>
+                <a href="billets.html" class="nav-link">Nos Billets</a>
+                <a href="histoire.html" class="nav-link">Notre Histoire</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="reserver.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Réserver</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header" style="padding-bottom: 7rem;">
+        <div class="container">
+            <h1>Demande de Voyage</h1>
+            <p>Remplissez le formulaire ci-dessous pour recevoir une proposition sur mesure via WhatsApp.</p>
+        </div>
+    </div>
+
+    <!-- FORM SECTION -->
+    <div class="container">
+        <div class="reservation-container animate-on-scroll">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Détails de votre projet</h2>
+            
+            <form id="reservationForm" onsubmit="handleReservationSubmit(event)">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nom" class="form-label">Nom et Prénoms *</label>
+                        <input type="text" id="nom" class="form-control" required placeholder="Ex: Jean Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone" class="form-label">Téléphone (WhatsApp) *</label>
+                        <input type="tel" id="telephone" class="form-control" required placeholder="+228 XX XX XX XX">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="form-label">Email *</label>
+                    <input type="email" id="email" class="form-control" required placeholder="votre.email@exemple.com">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ville_depart" class="form-label">Ville de départ *</label>
+                        <input type="text" id="ville_depart" class="form-control" required placeholder="Ex: Lomé">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination" class="form-label">Destination *</label>
+                        <input type="text" id="destination" class="form-control" required placeholder="Ex: Paris, France">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date_aller" class="form-label">Date Aller *</label>
+                        <input type="date" id="date_aller" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="date_retour" class="form-label">Date Retour *</label>
+                        <input type="date" id="date_retour" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nb_voyageurs" class="form-label">Nombre de voyageurs *</label>
+                        <input type="number" id="nb_voyageurs" min="1" class="form-control" required placeholder="Ex: 2">
+                    </div>
+                    <div class="form-group">
+                        <label for="type_voyage" class="form-label">Type de voyage *</label>
+                        <select id="type_voyage" class="form-control" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="Affaires">Affaires</option>
+                            <option value="Tourisme / Vacances">Tourisme / Vacances</option>
+                            <option value="Études">Études</option>
+                            <option value="Mission professionnelle">Mission professionnelle</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message" class="form-label">Message ou précision *</label>
+                    <textarea id="message" class="form-control" required placeholder="Besoins spécifiques, hôtel souhaité, visa..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem; font-size: 1.1rem;">
+                    <i class="fa-brands fa-whatsapp"></i> Envoyer ma demande via WhatsApp
+                </button>
+            </form>
+            <p style="text-align: center; font-size: 0.85rem; color: #666; margin-top: 1rem;">
+                En cliquant sur ce bouton, vous serez redirigé vers WhatsApp pour finaliser l'envoi de votre demande à notre agence (+228 98 33 79 56).
+            </p>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: var(--white); margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        HOPE <span>TRAVELS</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.8);">Offrez-vous le monde à petit prix. Votre partenaire voyage et tourisme de référence, basé à Lomé, Togo.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Utiles</h4>
+                    <a href="index.html" class="footer-link">Accueil</a>
+                    <a href="services.html" class="footer-link">Nos Services</a>
+                    <a href="billets.html" class="footer-link">Nos Billets</a>
+                    <a href="histoire.html" class="footer-link">Notre Histoire</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Rond point Bè Gakpoto-Yesuvito, à coté de la pharmacie, Lomé</p>
+                    <p><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +228 98 33 79 56 / +228 90 36 68 54</p>
+                    <p><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> hopetravels6@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Hope Travels & Tours. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/22898337956?text=Bonjour,%20j'ai%20besoin%20d'aide%20pour%20une%20r%C3%A9servation." class="whatsapp-float" target="_blank" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

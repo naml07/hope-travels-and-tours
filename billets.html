@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Billets | HOPE TRAVELS & TOURS</title>
+    <meta name="description" content="Réservez vos billets d'avion nationaux et internationaux au meilleur prix avec Hope Travels & Tours.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .page-header {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .page-header h1 { color: var(--white); margin-bottom: 0.5rem; }
+        
+        .global-dest {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            border-radius: 12px;
+            padding: 4rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .global-dest h2 { color: var(--white); margin-bottom: 1.5rem; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-plane-departure"></i>
+                HOPE <span>TRAVELS</span>
+            </a>
+            
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link">Nos Services</a>
+                <a href="billets.html" class="nav-link active">Nos Billets</a>
+                <a href="histoire.html" class="nav-link">Notre Histoire</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="reserver.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem;">Réserver</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Nos Billets</h1>
+            <p>Réservez vos vols nationaux et internationaux au meilleur tarif avec Hope Travels & Tours.</p>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <section class="section-light">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem;">Nos Offres Spéciales Billetterie</h2>
+            <div class="tickets-grid animate-on-scroll delay-100">
+                <!-- 1 -->
+                <div class="ticket-card">
+                    <img src="assets/images/dest_abuja.png" alt="Abuja" class="ticket-img">
+                    <div class="ticket-content">
+                        <div>
+                            <div class="ticket-route">Lomé - Abuja</div>
+                            <div class="ticket-airline"><i class="fa-solid fa-plane"></i> Asky</div>
+                            <div class="ticket-info">Aller-retour</div>
+                            <div class="ticket-price">483 000 FCFA</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="openTicketModal('Abuja', 'Tourisme / Vacances', 'Lomé')">Réserver</button>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="ticket-card">
+                    <img src="assets/images/dest_casablanca.png" alt="Casablanca" class="ticket-img">
+                    <div class="ticket-content">
+                        <div>
+                            <div class="ticket-route">Lomé - Casablanca</div>
+                            <div class="ticket-airline"><i class="fa-solid fa-plane"></i> Royal Air Maroc</div>
+                            <div class="ticket-info">Aller-retour</div>
+                            <div class="ticket-price" style="font-size: 1.25rem;">À partir de<br>802 200 FCFA</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="openTicketModal('Casablanca', 'Tourisme / Vacances', 'Lomé')">Réserver</button>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="ticket-card">
+                    <img src="assets/images/dest_frankfurt.png" alt="Francfort" class="ticket-img">
+                    <div class="ticket-content">
+                        <div>
+                            <div class="ticket-route">Lomé - Francfort</div>
+                            <div class="ticket-airline"><i class="fa-solid fa-plane"></i> Multi-compagnies</div>
+                            <div class="ticket-info">Aller simple</div>
+                            <div class="ticket-price">559 500 FCFA</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="openTicketModal('Francfort', 'Tourisme / Vacances', 'Lomé')">Réserver</button>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="ticket-card">
+                    <img src="assets/images/dest_paris_2.png" alt="Paris" class="ticket-img">
+                    <div class="ticket-content">
+                        <div>
+                            <div class="ticket-route">Lomé - Paris</div>
+                            <div class="ticket-airline"><i class="fa-solid fa-plane"></i> Air France</div>
+                            <div class="ticket-info">Aller simple</div>
+                            <div class="ticket-price">515 000 FCFA</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="openTicketModal('Paris', 'Tourisme / Vacances', 'Lomé')">Réserver</button>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="ticket-card">
+                    <img src="assets/images/dest_guangzhou.png" alt="Guangzhou" class="ticket-img">
+                    <div class="ticket-content">
+                        <div>
+                            <div class="ticket-route">Accra - Guangzhou</div>
+                            <div class="ticket-airline"><i class="fa-solid fa-plane"></i> Ethiopian Airlines</div>
+                            <div class="ticket-info">Aller (du 15 au 29 juin)<br><strong>Départ d'Accra</strong></div>
+                            <div class="ticket-price">694 700 FCFA</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="openTicketModal('Guangzhou', 'Affaires', 'Accra')">Réserver</button>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="ticket-card">
+                    <img src="assets/images/dest_dakar.png" alt="Dakar" class="ticket-img">
+                    <div class="ticket-content">
+                        <div>
+                            <div class="ticket-route">Cotonou - Dakar</div>
+                            <div class="ticket-airline"><i class="fa-solid fa-plane"></i> Air Sénégal</div>
+                            <div class="ticket-info">Aller-retour</div>
+                            <div class="ticket-price">456 300 FCFA</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="openTicketModal('Dakar', 'Tourisme / Vacances', 'Cotonou')">Réserver</button>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="ticket-card">
+                    <img src="assets/images/dest_paris_2.png" alt="Paris" class="ticket-img">
+                    <div class="ticket-content">
+                        <div>
+                            <div class="ticket-route">Abidjan - Paris</div>
+                            <div class="ticket-airline"><i class="fa-solid fa-plane"></i> Air France</div>
+                            <div class="ticket-info">Aller simple</div>
+                            <div class="ticket-price">584 000 FCFA</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="openTicketModal('Paris', 'Tourisme / Vacances', 'Abidjan')">Réserver</button>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="ticket-card">
+                    <img src="assets/images/dest_dubai_2.png" alt="Dubaï" class="ticket-img">
+                    <div class="ticket-content">
+                        <div>
+                            <div class="ticket-route">Lomé - Dubaï</div>
+                            <div class="ticket-airline"><i class="fa-solid fa-plane"></i> Ethiopian Airlines</div>
+                            <div class="ticket-info">Aller-retour</div>
+                            <div class="ticket-price">842 400 FCFA</div>
+                        </div>
+                        <button class="btn btn-primary" onclick="openTicketModal('Dubaï', 'Tourisme / Vacances', 'Lomé')">Réserver</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GLOBAL BANNER -->
+            <div class="global-dest animate-on-scroll delay-100">
+                <i class="fa-solid fa-earth-africa" style="font-size: 4rem; color: var(--accent-blue); margin-bottom: 1.5rem; opacity: 0.8;"></i>
+                <h2>Le Monde Entier à Votre Portée</h2>
+                <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto 2rem;">Que ce soit en Afrique, en Europe, en Amérique ou en Asie, notre réseau mondial et notre billetterie multi-compagnies nous permettent de vous y emmener au meilleur tarif.</p>
+                <a href="reserver.html" class="btn btn-secondary" style="background-color: var(--white); color: var(--primary-blue);">Réserver un Billet</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="color: var(--white); margin-bottom: 1.5rem;">
+                        <i class="fa-solid fa-plane-departure"></i>
+                        HOPE <span>TRAVELS</span>
+                    </div>
+                    <p style="color: rgba(255,255,255,0.8);">Offrez-vous le monde à petit prix. Votre partenaire voyage et tourisme de référence, basé à Lomé, Togo.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liens Utiles</h4>
+                    <a href="index.html" class="footer-link">Accueil</a>
+                    <a href="services.html" class="footer-link">Nos Services</a>
+                    <a href="billets.html" class="footer-link">Nos Billets</a>
+                    <a href="histoire.html" class="footer-link">Notre Histoire</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i> Rond point Bè Gakpoto-Yesuvito, à coté de la pharmacie, Lomé</p>
+                    <p><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +228 98 33 79 56 / +228 90 36 68 54</p>
+                    <p><i class="fa-solid fa-envelope" style="margin-right: 10px;"></i> hopetravels6@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Hope Travels & Tours. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a href="https://wa.me/22898337956?text=Bonjour,%20je%20souhaite%20r%C3%A9server%20un%20billet%20d'avion." class="whatsapp-float" target="_blank" aria-label="Contactez-nous sur WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- MODAL RESERVATION BILLETS -->
+    <div class="modal-overlay" id="ticketModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeTicketModal()" aria-label="Fermer"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <h2>Réserver ce Billet</h2>
+                <p style="color: var(--text-color);">Remplissez les informations ci-dessous pour générer votre demande WhatsApp.</p>
+            </div>
+            
+            <form onsubmit="handleTicketReservation(event)">
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1rem;">
+                    <div>
+                        <label for="m_nom" class="form-label">Nom et Prénoms *</label>
+                        <input type="text" id="m_nom" class="form-control" required placeholder="Ex: Jean Doe">
+                    </div>
+                    <div>
+                        <label for="m_telephone" class="form-label">Téléphone (WhatsApp) *</label>
+                        <input type="tel" id="m_telephone" class="form-control" required placeholder="+228 XX XX XX XX">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label for="m_email" class="form-label">Email *</label>
+                    <input type="email" id="m_email" class="form-control" required placeholder="votre.email@exemple.com">
+                </div>
+
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1rem;">
+                    <div>
+                        <label for="m_ville_depart" class="form-label">Ville de départ *</label>
+                        <input type="text" id="m_ville_depart" class="form-control" required>
+                    </div>
+                    <div>
+                        <label for="m_destination" class="form-label">Destination *</label>
+                        <input type="text" id="m_destination" class="form-control" required>
+                    </div>
+                </div>
+
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1rem;">
+                    <div>
+                        <label for="m_date_aller" class="form-label">Date Aller *</label>
+                        <input type="date" id="m_date_aller" class="form-control" required>
+                    </div>
+                    <div>
+                        <label for="m_date_retour" class="form-label">Date Retour</label>
+                        <input type="date" id="m_date_retour" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-row" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1rem;">
+                    <div>
+                        <label for="m_nb_voyageurs" class="form-label">Nombre de voyageurs *</label>
+                        <input type="number" id="m_nb_voyageurs" min="1" class="form-control" required value="1">
+                    </div>
+                    <div>
+                        <label for="m_type_voyage" class="form-label">Type de voyage *</label>
+                        <select id="m_type_voyage" class="form-control" required>
+                            <option value="">Sélectionnez...</option>
+                            <option value="Affaires">Affaires</option>
+                            <option value="Tourisme / Vacances">Tourisme / Vacances</option>
+                            <option value="Études">Études</option>
+                            <option value="Mission professionnelle">Mission professionnelle</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="m_message" class="form-label">Message ou précision</label>
+                    <textarea id="m_message" class="form-control" placeholder="Besoins spécifiques, classe de voyage, etc." style="min-height: 80px;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem;">
+                    <i class="fa-brands fa-whatsapp"></i> Envoyer ma demande
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
