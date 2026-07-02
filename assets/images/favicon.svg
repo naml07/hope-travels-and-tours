@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- Round corner rectangle background for premium app icon look -->
+  <rect width="512" height="512" rx="100" fill="#0A3D73" />
+  <!-- A subtle soft blue glowing trail or circle representing the globe or route -->
+  <path d="M 100 380 Q 240 380 380 200" fill="none" stroke="#1D6FB6" stroke-width="24" stroke-linecap="round" opacity="0.8"/>
+  <!-- Airplane icon flying upwards diagonally (top right) -->
+  <g transform="translate(256, 230) rotate(-45)">
+    <!-- Body -->
+    <path d="M -15 -140 C -15 -170 15 -170 15 -140 L 15 90 C 15 110 0 120 0 120 C 0 120 -15 110 -15 90 Z" fill="#FFFFFF" />
+    <!-- Main Wings -->
+    <path d="M -15 -30 L -170 30 C -185 35 -185 45 -170 45 L -15 20 Z" fill="#FFFFFF" />
+    <path d="M 15 -30 L 170 30 C 185 35 195 45 170 45 L 15 20 Z" fill="#FFFFFF" />
+    <!-- Tail Wings -->
+    <path d="M -15 75 L -60 105 C -68 110 -68 115 -60 115 L -15 100 Z" fill="#FFFFFF" />
+    <path d="M 15 75 L 60 105 C 68 110 68 115 60 115 L 15 100 Z" fill="#FFFFFF" />
+  </g>
+</svg>
