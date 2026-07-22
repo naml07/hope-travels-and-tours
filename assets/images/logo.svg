@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 70" width="100%" height="100%">
+  <defs>
+    <linearGradient id="globeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A3D73" />
+      <stop offset="100%" stop-color="#1D6FB6" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E5A93C" />
+      <stop offset="100%" stop-color="#FFD700" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#0A3D73" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <title>Hope Travels &amp; Tours Logo</title>
+  <desc>Logo vectoriel officiel de Hope Travels &amp; Tours — Agence de Voyage &amp; Tourisme</desc>
+
+  <!-- EMBLEME DU LOGO (icône globe & avion) -->
+  <g transform="translate(5, 5)" filter="url(#softShadow)">
+    <!-- Cercle globe de fond -->
+    <circle cx="30" cy="30" r="28" fill="url(#globeGrad)" />
+    
+    <!-- Lignes de méridiens / globe -->
+    <path d="M 10 30 Q 30 10 50 30 Q 30 50 10 30 Z" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.35" />
+    <path d="M 16 16 Q 30 30 44 44" fill="none" stroke="#FFFFFF" stroke-width="1.5" opacity="0.35" />
+    <path d="M 30 2 A 28 28 0 0 1 58 30" fill="none" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linecap="round" />
+
+    <!-- Trajectoire de vol dorée -->
+    <path d="M 12 42 Q 22 45 35 32 T 52 14" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="3,2" stroke-linecap="round" />
+
+    <!-- Avion stylisé en ascension vers la droite -->
+    <g transform="translate(38, 16) rotate(-35)">
+      <!-- Corps avion -->
+      <path d="M -2 -14 C -2 -17 2 -17 2 -14 L 2 10 C 2 12 0 13 0 13 C 0 13 -2 12 -2 10 Z" fill="#FFFFFF" />
+      <!-- Ailes principales -->
+      <path d="M -2 -3 L -16 4 C -17.5 4.5 -17.5 5.5 -16 5.5 L -2 3 Z" fill="#FFFFFF" />
+      <path d="M 2 -3 L 16 4 C 17.5 4.5 17.5 5.5 16 5.5 L 2 3 Z" fill="#FFFFFF" />
+      <!-- Ailes arrière -->
+      <path d="M -2 7.5 L -6.5 10.5 C -7.5 11 -7.5 11.5 -6.5 11.5 L -2 10 Z" fill="#FFFFFF" />
+      <path d="M 2 7.5 L 6.5 10.5 C 7.5 11 7.5 11.5 6.5 11.5 L 2 10 Z" fill="#FFFFFF" />
+    </g>
+  </g>
+
+  <!-- TYPOGRAPHIE DU LOGO -->
+  <g transform="translate(75, 0)">
+    <!-- Nom principal : HOPE -->
+    <text x="0" y="34" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#0A3D73" letter-spacing="1">HOPE</text>
+    
+    <!-- Point doré décoratif -->
+    <circle cx="86" cy="26" r="4" fill="url(#goldGrad)" />
+
+    <!-- Sous-titre : TRAVELS & TOURS -->
+    <text x="0" y="54" font-family="'Inter', system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#1D6FB6" letter-spacing="3.5">TRAVELS &amp; TOURS</text>
+  </g>
+</svg>
